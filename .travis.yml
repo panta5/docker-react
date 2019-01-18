@@ -4,11 +4,11 @@ services:
   # Travis CI is going to automatically install a copy of docker into our little running container
   - docker
 
-# commands that need to occur before we start to either start out test or deploy our project  
+# commands that need to occur before we start to either start out test or deploy our project
 before_install:
   - docker build -t mvignjevic/docker-react -f Dockerfile.dev .
 
-# commands that need to be run when our test needs to actually be executed 
+# commands that need to be run when our test needs to actually be executed
 script:
   # if any command return status code other than 0, Travis is going to assume that our build failed or that our test suite failed to run properly,
   # so it's going to assume that our code is essentially broken
