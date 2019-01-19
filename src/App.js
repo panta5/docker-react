@@ -1,4 +1,4 @@
-errorimport React, { Component } from 'react';error
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Changed on feature branch
+            Changed on feature branch and fixed errors
           </a>
         </header>
       </div>
