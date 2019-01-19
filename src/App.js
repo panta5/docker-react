@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+errorimport React, { Component } from 'react';error
 import logo from './logo.svg';
 import './App.css';
 
