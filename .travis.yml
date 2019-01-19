@@ -13,3 +13,17 @@ script:
   # if any command return status code other than 0, Travis is going to assume that our build failed or that our test suite failed to run properly,
   # so it's going to assume that our code is essentially broken
   - docker run mvignjevic/docker-react npm run test -- --coverage
+
+# tell Travis CI exactly how to take our application and deploy it off to AWS
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-225614405924"
+  bucket_path: "docker-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
